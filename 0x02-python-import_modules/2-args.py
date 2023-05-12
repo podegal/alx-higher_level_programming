@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys import argv
-    numofelement = len(argv)
-    print("{:d} {:s}{:s}".format(numofelement - 1, "argument" if numofelement <= 2 else "arguments",
-                                 "." if numofelement == 1 else ":"))
-    for i, s in enumerate(argv):
-        if i > 0:
-            print("{:d}: {:s}".format(i, s))
+    import sys
+    num_of_arg = len(sys.argv)
+    if num_of_arg == 1:
+        print("{} arguments.".format(0))
+    elif num_of_arg == 2:
+        print("{} argument:".format(1))
+    else:
+        print("{} arguments:".format(num_of_arg - 1))
+
+    for i in range(1, num_of_arg):
+        print("{}: {}".format(i, sys.argv[i]))
