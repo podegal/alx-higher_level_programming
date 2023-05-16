@@ -8,7 +8,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *currentNode;
-	char buffer[10000];
+	char buffer[8000];
 	int i, length = 0;	
 
 	if (!*head || !head)
