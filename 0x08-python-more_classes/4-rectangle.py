@@ -79,9 +79,21 @@ class Rectangle:
         return strRep
 
     def __repr__(self):
-        """get the string representation of a rectangle
-           Return:
-                  string representation
+        """gets the string representation of a rectangle
+           Returns:
+                  string with #
         """
 
-        return ("Rectangle({}, {})".format(self.__width, self.__height))
+        rep = ""
+
+        if self.__height == 0 or self.width == 0:
+            return (rep)
+        for i in range(self.__height):
+            rep += "#" * self.__width + '\n'
+
+        return (rep[:-1])
+
+    def __repr__(self):
+        """returns a string representation of the rectangle for reproduction"""
+
+        return "Rectangle({}, {})".format(self.__width, self.__height)
