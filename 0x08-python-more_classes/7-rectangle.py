@@ -3,11 +3,22 @@
 
 
 class Rectangle:
-    """defines a rectangle class"""
+    """defines a rectangle class
+    attributes:
+           width: positive integer (private)
+           height: positive integer (private)
+           number_of_instances: positive integer (public)
+           print_symbol: any type (public)"""
+
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """creates a new instance of a rectangle
-        Returns:
+        Args:
+               width: width
+               height: height
+           Returns:
                   None
         """
         self.height = height
