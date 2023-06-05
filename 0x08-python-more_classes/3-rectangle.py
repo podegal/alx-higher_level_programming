@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""rectangle class definition"""
+"""rectangle class documentation"""
 
 
 class Rectangle:
     """defines a rectangle class"""
 
     def __init__(self, width=0, height=0):
-        """creates a new instance of a rectangle"""
+        """creates an instance of a rectangle"""
         self.height = height
         self.width = width
 
@@ -68,13 +68,19 @@ class Rectangle:
 
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (2 * (self.__width + self.__height))
+        return (2*(self.__height + self.__width))
 
     def __str__(self):
-        """returns the printable string representation of the rectangle"""
+        """gets the string representation of a rectangle
+           Returns:
+                  string with #
+        """
 
         rep = ""
-        if self.__width != 0 and self.__height != 0:
-            rep += "\n".join("#" * self.__width
-                                 for j in range(self.__height))
-        return rep
+
+        if self.__height == 0 or self.width == 0:
+            return (rep)
+        for i in range(self.__height):
+            rep += "#" * self.__width + '\n'
+
+        return (rep[:-1])
