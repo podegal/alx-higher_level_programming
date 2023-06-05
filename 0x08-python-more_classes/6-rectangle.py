@@ -5,10 +5,19 @@
 class Rectangle:
     """defines a rectangle class"""
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
-        """creates a new instance of a rectangle"""
+        """creates a new instance of a rectangle
+        Args:
+               width: width
+               height: height
+           Returns:
+                  None
+        """
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
