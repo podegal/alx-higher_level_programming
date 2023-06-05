@@ -71,14 +71,6 @@ class Rectangle:
         return (2 * (self.__width + self.__height))
 
     def __str__(self):
-        """returns the printable string representation of the rectangle"""
-        strRep = ""
-        if self.__width != 0 and self.__height != 0:
-            strRep += "\n".join("#" * self.__width
-                                 for j in range(self.__height))
-        return strRep
-
-    def __repr__(self):
         """gets the string representation of a rectangle
            Returns:
                   string with #
