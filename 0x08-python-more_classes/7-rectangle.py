@@ -58,10 +58,8 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """sets the height of the rectangle instance
-
         Args:
             value (int): the height of the rectangle instance
-
         Raises:
             TypeError: if the value is not an integer
             ValueError: if the value is less than 0
