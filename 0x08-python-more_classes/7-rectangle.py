@@ -8,7 +8,8 @@ class Rectangle:
            width: positive integer (private)
            height: positive integer (private)
            number_of_instances: positive integer (public)
-           print_symbol: any type (public)"""
+           print_symbol: any type (public)
+    """
 
     number_of_instances = 0
     print_symbol = "#"
